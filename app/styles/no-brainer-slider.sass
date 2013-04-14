@@ -1,0 +1,299 @@
+// --------------------------------------------------------------
+// Imports
+// ============================================================================
+
+@import 'compass'
+
+
+// --------------------------------------------------------------
+// Mixins
+// ============================================================================
+
+// * Compass own mixin seems to be broken
+=transform-origin($value...)
+    -webkit-transform-origin: $value
+    -moz-transform-origin: $value
+    -ms-transform-origin: $value
+    transform-origin: $value
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+
+=animation($value...)
+    -webkit-animation: $value
+    -moz-animation: $value
+    -ms-animation: $value
+    animation: $value
+
+
+// --------------------------------------------------------------
+// Slider transitions
+// ============================================================================
+
+.nbs-transition-slide-x
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current
+        +transform(translateX(-100%))
+
+    .nbs-after-current
+        +transform(translateX(100%))
+
+    .nbs-current
+        +transform(translateX(0))
+
+
+.nbs-transition-slide-x-on-top
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current
+        +transform(translateX(-100%))
+
+    .nbs-after-current
+        +transform(translateX(100%))
+
+    .nbs-before-current.nbs-visible,
+    .nbs-after-current.nbs-visible
+        +transition-delay(.4s)
+        +transition-duration(0)
+
+    .nbs-current
+        +transform(translateX(0))
+        z-index: 1
+
+
+.nbs-transition-slide-x-from-bottom
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current.nbs-visible
+        +transform(translateX(-100%))
+        z-index: 2
+
+    .nbs-after-current.nbs-visible
+        +transform(translateX(100%))
+        z-index: 2
+
+    .nbs-current
+        +transform(translateX(0))
+        z-index: 1
+
+
+.nbs-transition-slide-y
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current
+        +transform(translateY(100%))
+
+    .nbs-after-current
+        +transform(translateY(-100%))
+
+    .nbs-current
+        +transform(translateY(0))
+
+
+.nbs-transition-slide-y-on-top
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current
+        +transform(translateY(100%))
+
+    .nbs-after-current
+        +transform(translateY(-100%))
+
+    .nbs-before-current.nbs-visible,
+    .nbs-after-current.nbs-visible
+        +transition-delay(.4s)
+        +transition-duration(0)
+
+    .nbs-current
+        +transform(translateY(0))
+        z-index: 1
+
+
+.nbs-transition-slide-y-from-bottom
+    .nbs-visible
+        +transition(transform .4s)
+
+    .nbs-before-current.nbs-visible
+        +transform(translateY(100%))
+        z-index: 2
+
+    .nbs-after-current.nbs-visible
+        +transform(translateY(-100%))
+        z-index: 2
+
+    .nbs-current
+        +transform(translateY(0))
+        z-index: 1
+
+
+.nbs-transition-fade
+    .nbs-visible
+        +transition(opacity .6s)
+
+    .nbs-before-current,
+    .nbs-after-current
+        opacity: 0
+
+    .nbs-current
+        opacity: 1
+
+
+.nbs-transition-flip-y
+    overflow: visible
+    +perspective(800px)
+    +transform-style(preserve-3d)
+
+    .nbs-slide
+        +backface-visibility(hidden)
+
+    .nbs-visible
+        +transition(transform 2s)
+
+    .nbs-before-current
+        +transform(rotateY(-180deg))
+        +transform-origin(right center)
+
+    .nbs-after-current
+        +transform(rotateY(-180deg))
+        +transform-origin(left center)
+
+    .nbs-current
+        +transform(rotateY(0))
+        +transform-origin(left center)
+
+    &.backward .nbs-current
+        +transform-origin(right center)
+
+
+.nbs-transition-flip-x
+    overflow: visible
+    +perspective(800px)
+    +transform-style(preserve-3d)
+
+    .nbs-slide
+        +backface-visibility(hidden)
+
+    .nbs-visible
+        +transition(transform 2s)
+
+    .nbs-before-current
+        +transform(rotateX(-180deg))
+        +transform-origin(top center)
+
+    .nbs-after-current
+        +transform(rotateX(-180deg))
+        +transform-origin(bottom center)
+
+    .nbs-current
+        +transform(rotateX(0))
+        +transform-origin(bottom center)
+
+    &.backward .nbs-current
+        +transform-origin(top center)
+
+
+.nbs-transition-cube-x
+    overflow: visible
+    +perspective(800px)
+    +transform-style(preserve-3d)
+
+    .nbs-slide
+        +backface-visibility(hidden)
+
+    .nbs-visible
+        +transition(all 2s)
+
+    .nbs-before-current
+        left: -100%
+        +transform-origin(right center)
+        +transform(rotateY(-90deg))
+
+
+    .nbs-after-current
+        left: 100%
+        +transform-origin(left center)
+        +transform(rotateY(90deg))
+
+
+    .nbs-current
+        left: 0
+        +transform-origin(center center)
+        +transform(rotateY(0))
+
+
+.nbs-transition-cube-y
+    overflow: visible
+    +perspective(800px)
+    +transform-style(preserve-3d)
+
+    .nbs-slide
+        +backface-visibility(hidden)
+
+    .nbs-visible
+        +transition(all 2s)
+
+    .nbs-before-current
+        top: 100%
+        +transform-origin(top center)
+        +transform(rotateX(-90deg))
+
+
+    .nbs-after-current
+        top: -100%
+        +transform-origin(bottom center)
+        +transform(rotateX(90deg))
+
+
+    .nbs-current
+        top: 0
+        +transform-origin(center center)
+        +transform(rotateX(0))
+
+
+.nbs-transition-cube-z
+    overflow: visible
+    +perspective(800px)
+    +transform-style(preserve-3d)
+
+    .nbs-slide
+        +backface-visibility(hidden)
+
+    .nbs-visible
+        +transition(all 2s)
+
+    .nbs-before-current
+        top: 100%
+        left: -100%
+        opacity: 0
+        +transform-origin(top center)
+        +transform(rotateX(-90deg) rotateZ(45deg))
+
+
+    .nbs-after-current
+        top: -100%
+        left: 100%
+        opacity: 0
+        +transform-origin(bottom left)
+        +transform(rotateX(90deg) rotateZ(-45deg))
+
+
+    .nbs-current
+        top: 0
+        left: 0
+        opacity: 1
+        +transform-origin(center center)
+        +transform(rotateX(0) rotateZ(0))
