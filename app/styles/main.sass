@@ -172,7 +172,7 @@ body
                 left: 0
 
             &:before
-                color: #006394
+                color: #464674
 
             &:after
                 height: ((16 * 1.7 - 7) / (2*16*1.7)) * 1em
@@ -184,17 +184,24 @@ body
     margin: 50px 0 0
     padding: 0 10%
 
+    overflow: hidden
+
     @media (max-width: $bp2)
         margin-top: 20px
+
+    section
+        margin: 60px 0
+
+        @media (max-width: $bp2)
+            margin: 30px 0
+
+        &:first-child
+            margin: 0
 
 
 .about
     font-size: 1.1em
     font-style: italic
-
-
-.examples
-    margin: 60px 0
 
 
 .warn
@@ -207,6 +214,18 @@ body
 .site-footer
     @extend %invert-color-scheme
     padding: 25px 5%
+
+
+.ao-icon
+    display: inline-block
+    font-style: normal
+    line-height: 0
+    +transition(color .3s)
+
+    &:before
+        content: "⌬"
+        font-size: 3em
+
 
 // >------------= Slider =------------<
 
