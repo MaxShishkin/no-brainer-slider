@@ -25,3 +25,18 @@ $autoplayAll.on 'change', (e) ->
 # causing repaint on resize
 $(window).resize () ->
   $slides.css('visibility', 'visible')
+
+
+if !Modernizr.csstransitions
+    $('.examples h2').after '<div class="warn">
+        Your browser doesn\'t support css transitions. We\'re doomed.
+        </div>'
+else
+    if !Modernizr.csstransforms
+        $('.examples h2').after '<div class="warn">
+            Your browser doesn\'t support css transformations. Too bad to be true.
+            </div>'
+    else if !Modernizr.csstransforms3d
+        $('.examples h2').after '<div class="warn">
+            Your browser doesn\'t support css 3d transformations. Half examples won\'t work.
+            </div>'

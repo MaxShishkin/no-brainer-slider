@@ -46,8 +46,6 @@ noBrainerSlider =
     gotoSlide: (id) ->
         return if !@_canSwitchToSlide(id)
 
-        @_autoplay false
-
         if (id < @activeSlideId)
             @$element.addClass('backward')
         else
@@ -70,6 +68,11 @@ noBrainerSlider =
             if i == @activeSlideId
                 $slide.addClass('nbs-visible')
                 @$$navLinks[i].removeClass('active')
+
+        if Modernizr.csstransitions
+            @_autoplay false
+        else
+            @_autoplay @options.autoplay
 
         @activeSlideId = id;
 
@@ -109,3 +112,14 @@ $.fn.noBrainerSlider = (options) ->
 $.fn.noBrainerSlider.defaultOptions =
     autoplay: false
     autoplayDelay: 5000
+
+
+if !Object.create
+    Object.create = (o) ->
+        if arguments.length > 1
+            throw new Error('Object.create implementation only accepts the first parameter.')
+
+        F = ->
+        F.prototype = o
+
+        return new F
