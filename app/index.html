@@ -9,10 +9,12 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/no-brainer-slider.css">
+        <link rel="stylesheet" href="components/prism/prism.css">
         <script src="scripts/vendor/modernizr.custom.js"></script>
     </head>
     <body>
         <header class="site-header">
+            <!-- Who removed hgroup out of the spec?! [Commented @ Apr 21 2013] -->
             <hgroup class="headline">
                 <h1 class="hero">No Brainer Slider</h1>
                 <h2 class="h5">A really simple css3 drop-in slider</h2>
@@ -29,9 +31,10 @@
             <section class="about">
                 <p>
                     This is a small css-driven slider with really simplistic javascript logic.
-                    The goal was to make a simple drop-in solution, that can be used standalone or
-                    as a blueprint for more complex work on top.
-                    Also it's a good fit to use in prototyping.
+                    The goal was to see how far i can get using css transitions with minimum number
+                    of classes and small-possible javascript acting as a state changer.
+                    You can use it as a simple drop-in solution while prototyping, as a blueprint
+                    for more complex work on top or use it standalone as is.
                 </p>
             </section>
 
@@ -405,11 +408,139 @@
                 </div>
             </section>
 
+            <section class="howto">
+                <h2>How to use</h2>
+
+                <p>
+                    No Brainer Slider (Nbs) depends on jQuery (it's a jQuery plugin)
+                    and Modernizr for feature detection. Particulary, Modernizr is used
+                    to detect csstransitions, csstransforms and csstransforms3d features.
+                    Using Nbs is simple, here's an example.
+                </p>
+
+                <p>HTML:</p>
+
+                <pre><code class="language-markup">
+&lt;div class="slider nbs-transition-flip-x">
+    &lt;div>Slide 1&lt;/div>
+    &lt;div>Slide 2&lt;/div>
+    &lt;div>Slide 3&lt;/div>
+    &lt;!-- etc. -->
+&lt;/div>
+&lt;div class="nav-for-slider">
+    &lt;span class="slide-nav">1&lt;/span>
+    &lt;span class="slide-nav">2&lt;/span>
+    &lt;span class="slide-nav">3&lt;/span>
+&lt;/div>
+                </code></pre>
+
+                <p>JavaScript:</p>
+
+                <pre><code class="language-javascript">
+$('.slider').noBrainerSlider({
+    nav: $('.nav-for-slider'),
+    autoplay: false
+});
+
+// use api to control the slider if needed
+var nbs = $('.slider').data('noBrainerSlider');
+
+nbs.gotoSlide(3);
+nbs.setAutoplay(true);
+                </code></pre>
+
+                <p>
+                    Here we have a <code class="language-markup">&lt;div class="slider nbs-transition-flip-x"></code>,
+                    every direct child of which is considered a slide. The important part here is the class name
+                    <code class="language-markup">nbs-transition-flip-x</code> that defines the type of animation to use.
+                    The <code class="language-markup">slider</code> class name is used just to target the slider from the script
+                    and can be whatever you want.
+                </p>
+
+                <p>
+                    Below slider comes the navigation <code class="language-markup">&lt;div class="nav-for-slider"></code>.
+                    Each child of the navigation container with the class name of <code class="language-markup">slide-nav</code>
+                    is considered a navigation item. Navigation items correspond to a particular slide by the order
+                    in which they come. E.i. the first found element with the class of <code class="language-markup">slide-nav</code>
+                    is used to activate the first slide. Navigation is optional.
+                </p>
+
+                <p>
+                    Then we need to activate the slider. We do it by calling the <code class="language-javascript">noBrainerSlider()</code>
+                    method on the slider. Several options can be passed to the method:
+                    <ul class="no-marks">
+                        <li>
+                            <code class="language-javascript">nav</code> —
+                            jQuery object representing the navigation for the slider,
+                        </li>
+                        <li>
+                            <code class="language-javascript">autoplay</code> —
+                            change slides automatically, true/false value, defaults to false,
+                        </li>
+                        <li>
+                            <code class="language-javascript">autoplayDelay</code> —
+                            autoplay delay in ms.
+                        </li>
+                    </ul>
+                </p>
+
+                <p>
+                    You can control the slider by hand in your code, just grab the slider controller, that is stored
+                    as data-attribute on the slider element. Api contains just two functions:
+                    <code class="language-javascript">gotoSlide(number)</code> to switch between slides (zero-based) and
+                    <code class="language-javascript">setAutoplay(bool)</code> to turn autoplay on/off.
+                </p>
+
+                <p>
+                    Class names avaliable for different transition effects
+                    (see examples above and <code class="language-markup">no-brainer-slider.sass</code> file):
+
+                    <ul class="no-marks">
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x-on-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x-off-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y-on-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y-off-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-fade</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-flip-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-flip-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-z</code>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
             <section class="issues">
                 <h2>Known issues</h2>
 
                 <p>
-                    IE10 doesn't support `transformStyle: preserve-3d` and `backface-visibility: hidden` — some examples are broken.
+                    IE10 seem not to support <code class="language-css">transformStyle: preserve-3d</code> and <code class="language-css">backface-visibility: hidden</code> — some examples are broken.
                 </p>
             </section>
         </div>
@@ -422,6 +553,7 @@
         <script src="components/jquery/jquery.js"></script>
         <script src="scripts/no-brainer-slider.js"></script>
         <script src="scripts/main.js"></script>
+        <script src="components/prism/prism.js"></script>
         <!-- endbuild -->
 
 </body>
