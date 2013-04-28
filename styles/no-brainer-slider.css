@@ -1,0 +1,533 @@
+.no-csstransitions .nbs-transition-slide-x .nbs-slide, .no-csstransforms .nbs-transition-slide-x .nbs-slide, .no-csstransitions .nbs-transition-slide-x-on-top .nbs-slide, .no-csstransforms .nbs-transition-slide-x-on-top .nbs-slide, .no-csstransitions .nbs-transition-slide-x-off-top .nbs-slide, .no-csstransforms .nbs-transition-slide-x-off-top .nbs-slide, .no-csstransitions .nbs-transition-slide-y .nbs-slide, .no-csstransforms .nbs-transition-slide-y .nbs-slide, .no-csstransitions .nbs-transition-slide-y-on-top .nbs-slide, .no-csstransforms .nbs-transition-slide-y-on-top .nbs-slide, .no-csstransitions .nbs-transition-slide-y-off-top .nbs-slide, .no-csstransforms .nbs-transition-slide-y-off-top .nbs-slide, .no-csstransitions .nbs-transition-fade .nbs-slide, .no-csstransitions .nbs-transition-flip-y .nbs-slide, .no-csstransforms .nbs-transition-flip-y .nbs-slide, .no-csstransforms3d .nbs-transition-flip-y .nbs-slide, .no-csstransitions .nbs-transition-flip-x .nbs-slide, .no-csstransforms .nbs-transition-flip-x .nbs-slide, .no-csstransforms3d .nbs-transition-flip-x .nbs-slide, .no-csstransitions .nbs-transition-cube-x .nbs-slide, .no-csstransforms .nbs-transition-cube-x .nbs-slide, .no-csstransforms3d .nbs-transition-cube-x .nbs-slide, .no-csstransitions .nbs-transition-cube-y .nbs-slide, .no-csstransforms .nbs-transition-cube-y .nbs-slide, .no-csstransforms3d .nbs-transition-cube-y .nbs-slide, .no-csstransitions .nbs-transition-cube-z .nbs-slide, .no-csstransforms .nbs-transition-cube-z .nbs-slide, .no-csstransforms3d .nbs-transition-cube-z .nbs-slide {
+  display: none;
+}
+.no-csstransitions .nbs-transition-slide-x .nbs-current, .no-csstransforms .nbs-transition-slide-x .nbs-current, .no-csstransitions .nbs-transition-slide-x-on-top .nbs-current, .no-csstransforms .nbs-transition-slide-x-on-top .nbs-current, .no-csstransitions .nbs-transition-slide-x-off-top .nbs-current, .no-csstransforms .nbs-transition-slide-x-off-top .nbs-current, .no-csstransitions .nbs-transition-slide-y .nbs-current, .no-csstransforms .nbs-transition-slide-y .nbs-current, .no-csstransitions .nbs-transition-slide-y-on-top .nbs-current, .no-csstransforms .nbs-transition-slide-y-on-top .nbs-current, .no-csstransitions .nbs-transition-slide-y-off-top .nbs-current, .no-csstransforms .nbs-transition-slide-y-off-top .nbs-current, .no-csstransitions .nbs-transition-fade .nbs-current, .no-csstransitions .nbs-transition-flip-y .nbs-current, .no-csstransforms .nbs-transition-flip-y .nbs-current, .no-csstransforms3d .nbs-transition-flip-y .nbs-current, .no-csstransitions .nbs-transition-flip-x .nbs-current, .no-csstransforms .nbs-transition-flip-x .nbs-current, .no-csstransforms3d .nbs-transition-flip-x .nbs-current, .no-csstransitions .nbs-transition-cube-x .nbs-current, .no-csstransforms .nbs-transition-cube-x .nbs-current, .no-csstransforms3d .nbs-transition-cube-x .nbs-current, .no-csstransitions .nbs-transition-cube-y .nbs-current, .no-csstransforms .nbs-transition-cube-y .nbs-current, .no-csstransforms3d .nbs-transition-cube-y .nbs-current, .no-csstransitions .nbs-transition-cube-z .nbs-current, .no-csstransforms .nbs-transition-cube-z .nbs-current, .no-csstransforms3d .nbs-transition-cube-z .nbs-current {
+  display: block;
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-x .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x .nbs-before-current {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-x .nbs-after-current {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-x .nbs-current {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-before-current {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-after-current {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-before-current.nbs-visible,
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-after-current.nbs-visible {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-on-top .nbs-current {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-x-off-top .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-off-top .nbs-before-current.nbs-visible {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  z-index: 2;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-off-top .nbs-after-current.nbs-visible {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  z-index: 2;
+}
+.csstransitions.csstransforms .nbs-transition-slide-x-off-top .nbs-current {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-y .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y .nbs-before-current {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-y .nbs-after-current {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-y .nbs-current {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-before-current {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-after-current {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-before-current.nbs-visible,
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-after-current.nbs-visible {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-on-top .nbs-current {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.csstransitions.csstransforms .nbs-transition-slide-y-off-top .nbs-visible {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-off-top .nbs-before-current.nbs-visible {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  z-index: 2;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-off-top .nbs-after-current.nbs-visible {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  z-index: 2;
+}
+.csstransitions.csstransforms .nbs-transition-slide-y-off-top .nbs-current {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.csstransitions .nbs-transition-fade .nbs-visible {
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.csstransitions .nbs-transition-fade .nbs-before-current,
+.csstransitions .nbs-transition-fade .nbs-after-current {
+  opacity: 0;
+}
+.csstransitions .nbs-transition-fade .nbs-current {
+  opacity: 1;
+}
+
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y {
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y .nbs-slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y .nbs-visible {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y .nbs-before-current {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y .nbs-after-current {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y .nbs-current {
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-y.backward .nbs-current {
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x {
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x .nbs-slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x .nbs-visible {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x .nbs-before-current {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x .nbs-after-current {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x .nbs-current {
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  transform: rotateX(0);
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-flip-x.backward .nbs-current {
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x {
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x .nbs-slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x .nbs-visible {
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x .nbs-before-current {
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: translateX(-100%) rotateY(-90deg);
+  -moz-transform: translateX(-100%) rotateY(-90deg);
+  -ms-transform: translateX(-100%) rotateY(-90deg);
+  -o-transform: translateX(-100%) rotateY(-90deg);
+  transform: translateX(-100%) rotateY(-90deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x .nbs-after-current {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: translateX(100%) rotateY(90deg);
+  -moz-transform: translateX(100%) rotateY(90deg);
+  -ms-transform: translateX(100%) rotateY(90deg);
+  -o-transform: translateX(100%) rotateY(90deg);
+  transform: translateX(100%) rotateY(90deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-x .nbs-current {
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translateX(0) rotateY(0);
+  -moz-transform: translateX(0) rotateY(0);
+  -ms-transform: translateX(0) rotateY(0);
+  -o-transform: translateX(0) rotateY(0);
+  transform: translateX(0) rotateY(0);
+}
+
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y {
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y .nbs-slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y .nbs-visible {
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y .nbs-before-current {
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translateY(100%) rotateX(-90deg);
+  -moz-transform: translateY(100%) rotateX(-90deg);
+  -ms-transform: translateY(100%) rotateX(-90deg);
+  -o-transform: translateY(100%) rotateX(-90deg);
+  transform: translateY(100%) rotateX(-90deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y .nbs-after-current {
+  -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -webkit-transform: translateY(-100%) rotateX(90deg);
+  -moz-transform: translateY(-100%) rotateX(90deg);
+  -ms-transform: translateY(-100%) rotateX(90deg);
+  -o-transform: translateY(-100%) rotateX(90deg);
+  transform: translateY(-100%) rotateX(90deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-y .nbs-current {
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translateY(0) rotateX(0);
+  -moz-transform: translateY(0) rotateX(0);
+  -ms-transform: translateY(0) rotateX(0);
+  -o-transform: translateY(0) rotateX(0);
+  transform: translateY(0) rotateX(0);
+}
+
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z {
+  overflow: visible;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z .nbs-slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z .nbs-visible {
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z .nbs-before-current {
+  opacity: 0;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-transform: translateX(-100%) translateY(100%) rotateX(-90deg) rotateZ(45deg);
+  -moz-transform: translateX(-100%) translateY(100%) rotateX(-90deg) rotateZ(45deg);
+  -ms-transform: translateX(-100%) translateY(100%) rotateX(-90deg) rotateZ(45deg);
+  -o-transform: translateX(-100%) translateY(100%) rotateX(-90deg) rotateZ(45deg);
+  transform: translateX(-100%) translateY(100%) rotateX(-90deg) rotateZ(45deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z .nbs-after-current {
+  opacity: 0;
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  -webkit-transform: translateX(100%) translateY(-100%) rotateX(90deg) rotateZ(-45deg);
+  -moz-transform: translateX(100%) translateY(-100%) rotateX(90deg) rotateZ(-45deg);
+  -ms-transform: translateX(100%) translateY(-100%) rotateX(90deg) rotateZ(-45deg);
+  -o-transform: translateX(100%) translateY(-100%) rotateX(90deg) rotateZ(-45deg);
+  transform: translateX(100%) translateY(-100%) rotateX(90deg) rotateZ(-45deg);
+}
+.csstransitions.csstransforms.csstransforms3d .nbs-transition-cube-z .nbs-current {
+  opacity: 1;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: translateX(0) translateY(0) rotateX(0) rotateZ(0);
+  -moz-transform: translateX(0) translateY(0) rotateX(0) rotateZ(0);
+  -ms-transform: translateX(0) translateY(0) rotateX(0) rotateZ(0);
+  -o-transform: translateX(0) translateY(0) rotateX(0) rotateZ(0);
+  transform: translateX(0) translateY(0) rotateX(0) rotateZ(0);
+}
