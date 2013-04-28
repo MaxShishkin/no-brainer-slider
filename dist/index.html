@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>No Brainer Slider</title>
+        <meta name="description" content="A really simple css3 slider">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+
+        <link rel="stylesheet" href="styles/main.min.css">
+
+
+
+        <link rel="stylesheet" href="styles/no-brainer-slider.min.css">
+
+        <link rel="stylesheet" href="styles/vendor/prism.min.css">
+
+        <script src="scripts/vendor/modernizr.custom.min.js"></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <!-- Who removed hgroup out of the spec?! [Commented @ Apr 21 2013] -->
+            <hgroup class="headline">
+                <h1 class="hero">No Brainer Slider</h1>
+                <h2 class="h5">A really simple css3 drop-in slider</h2>
+            </hgroup>
+
+            <div class="download">
+                <a class="button" href="#" data-value="Download">Download</a>
+                or
+                <a class="button" href="#" data-value="Contribute">Contribute</a>
+            </div>
+        </header>
+
+        <div class="site-main">
+            <section class="about">
+                <p>
+                    This is a small css-driven slider with really simplistic javascript logic.
+                    The goal was to see how far i can get using css transitions with minimum number
+                    of classes and small-possible javascript acting as a state changer.
+                    You can use it as a simple drop-in solution while prototyping, as a blueprint
+                    for more complex work on top or use it standalone as is.
+                </p>
+            </section>
+
+            <section class="examples">
+                <h2>Examples</h2>
+
+                <div class="autoplay-all">
+                    <label>
+                        <input type="checkbox"> Autoplay all
+                    </label>
+                </div>
+
+                <div class="group">
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-x">
+                            <div class="slide color-1">
+                                slide 1
+                            </div>
+                            <div class="slide color-3">
+                                slide 2
+                            </div>
+                            <div class="slide color-2">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide X</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-x-on-top">
+                            <div class="slide color-2">
+                                slide 1
+                            </div>
+                            <div class="slide color-3">
+                                slide 2
+                            </div>
+                            <div class="slide color-1">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide X On Top</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-x-off-top">
+                            <div class="slide color-3">
+                                slide 1
+                            </div>
+                            <div class="slide color-1">
+                                slide 2
+                            </div>
+                            <div class="slide color-2">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide X Off Top</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-y">
+                            <div class="slide color-2">
+                                slide 1
+                            </div>
+                            <div class="slide color-1">
+                                slide 2
+                            </div>
+                            <div class="slide color-3">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide Y</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-y-on-top">
+                            <div class="slide color-1">
+                                slide 1
+                            </div>
+                            <div class="slide color-2">
+                                slide 2
+                            </div>
+                            <div class="slide color-3">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide Y On Top</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-slide-y-off-top">
+                            <div class="slide color-2">
+                                slide 1
+                            </div>
+                            <div class="slide color-1">
+                                slide 2
+                            </div>
+                            <div class="slide color-3">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Slide Y Off Top</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-fade">
+                            <div class="slide color-1">
+                                slide 1
+                            </div>
+                            <div class="slide color-2">
+                                slide 2
+                            </div>
+                            <div class="slide color-3">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Fade</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-flip-y">
+                            <div class="slide color-3">
+                                slide 1
+                            </div>
+                            <div class="slide color-2">
+                                slide 2
+                            </div>
+                            <div class="slide color-1">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Flip Y</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-flip-x">
+                            <div class="slide color-1">
+                                slide 1
+                            </div>
+                            <div class="slide color-2">
+                                slide 2
+                            </div>
+                            <div class="slide color-3">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Flip X</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-cube-x">
+                            <div class="slide color-3">
+                                slide 1
+                            </div>
+                            <div class="slide color-1">
+                                slide 2
+                            </div>
+                            <div class="slide color-2">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Cube X</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-cube-y">
+                            <div class="slide color-2">
+                                slide 1
+                            </div>
+                            <div class="slide color-3">
+                                slide 2
+                            </div>
+                            <div class="slide color-1">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Cube Y</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-1-3">
+                        <div class="slider nbs-transition-cube-z">
+                            <div class="slide color-3">
+                                slide 1
+                            </div>
+                            <div class="slide color-1">
+                                slide 2
+                            </div>
+                            <div class="slide color-2">
+                                slide 3
+                            </div>
+                        </div>
+
+                        <div class="title">Cube Z</div>
+
+                        <div class="controls">
+                            <ul class="slider-nav">
+                                <li class="slide-nav">1</li>
+                                <li class="slide-nav">2</li>
+                                <li class="slide-nav">3</li>
+                            </ul>
+
+                            <div class="autoplay">
+                                <label>
+                                    <input type="checkbox"> Autoplay
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="howto">
+                <h2>How to use</h2>
+
+                <p>
+                    No Brainer Slider (Nbs) depends on jQuery (it's a jQuery plugin)
+                    and Modernizr for feature detection. Particulary, Modernizr is used
+                    to detect csstransitions, csstransforms and csstransforms3d features.
+                    Using Nbs is simple, here's an example.
+                </p>
+
+                <p>HTML:</p>
+
+                <pre><code class="language-markup">
+&lt;div class="slider nbs-transition-flip-x">
+    &lt;div>Slide 1&lt;/div>
+    &lt;div>Slide 2&lt;/div>
+    &lt;div>Slide 3&lt;/div>
+    &lt;!-- etc. -->
+&lt;/div>
+&lt;div class="nav-for-slider">
+    &lt;span class="slide-nav">1&lt;/span>
+    &lt;span class="slide-nav">2&lt;/span>
+    &lt;span class="slide-nav">3&lt;/span>
+&lt;/div>
+                </code></pre>
+
+                <p>JavaScript:</p>
+
+                <pre><code class="language-javascript">
+$('.slider').noBrainerSlider({
+    nav: $('.nav-for-slider'),
+    autoplay: false
+});
+
+// use api to control the slider if needed
+var nbs = $('.slider').data('noBrainerSlider');
+
+nbs.gotoSlide(3);
+nbs.setAutoplay(true);
+                </code></pre>
+
+                <p>
+                    Here we have a <code class="language-markup">&lt;div class="slider nbs-transition-flip-x"></code>,
+                    every direct child of which is considered a slide. The important part here is the class name
+                    <code class="language-markup">nbs-transition-flip-x</code> that defines the type of animation to use.
+                    The <code class="language-markup">slider</code> class name is used just to target the slider from the script
+                    and can be whatever you want.
+                </p>
+
+                <p>
+                    Below slider comes the navigation <code class="language-markup">&lt;div class="nav-for-slider"></code>.
+                    Each child of the navigation container with the class name of <code class="language-markup">slide-nav</code>
+                    is considered a navigation item. Navigation items correspond to a particular slide by the order
+                    in which they come. E.i. the first found element with the class of <code class="language-markup">slide-nav</code>
+                    is used to activate the first slide. Navigation is optional.
+                </p>
+
+                <p>
+                    Then we need to activate the slider. We do it by calling the <code class="language-javascript">noBrainerSlider()</code>
+                    method on the slider. Several options can be passed to the method:
+                    <ul class="no-marks">
+                        <li>
+                            <code class="language-javascript">nav</code> —
+                            jQuery object representing the navigation for the slider,
+                        </li>
+                        <li>
+                            <code class="language-javascript">autoplay</code> —
+                            change slides automatically, true/false value, defaults to false,
+                        </li>
+                        <li>
+                            <code class="language-javascript">autoplayDelay</code> —
+                            autoplay delay in ms.
+                        </li>
+                    </ul>
+                </p>
+
+                <p>
+                    You can control the slider by hand in your code, just grab the slider controller, that is stored
+                    as data-attribute on the slider element. Api contains just two functions:
+                    <code class="language-javascript">gotoSlide(number)</code> to switch between slides (zero-based) and
+                    <code class="language-javascript">setAutoplay(bool)</code> to turn autoplay on/off.
+                </p>
+
+                <p>
+                    Class names avaliable for different transition effects
+                    (see examples above and <code class="language-markup">no-brainer-slider.sass</code> file):
+
+                    <ul class="no-marks">
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x-on-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-x-off-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y-on-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-slide-y-off-top</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-fade</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-flip-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-flip-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-x</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-y</code>
+                        </li>
+                        <li>
+                            <code class="language-markup">nbs-transition-cube-z</code>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+
+            <section class="issues">
+                <h2>Known issues</h2>
+
+                <p>
+                    IE10 seem not to support <code class="language-css">transformStyle: preserve-3d</code> and <code class="language-css">backface-visibility: hidden</code> — some examples are broken.
+                </p>
+            </section>
+        </div>
+
+        <footer class="site-footer">
+            <i class="ao-icon"></i> authored by Max Shishkin, 2013
+        </footer>
+
+        <script src="scripts/vendor/jquery.min.js"></script>
+
+        <script src="scripts/vendor/prism.min.js"></script>
+
+
+
+        <script src="scripts/no-brainer-slider.min.js"></script>
+
+
+
+        <script src="scripts/main.min.js"></script>
+</body>
+</html>

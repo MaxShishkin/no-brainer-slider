@@ -1,0 +1,308 @@
+// --------------------------------------------------------------
+// Imports
+// ============================================================================
+
+@import 'compass'
+
+
+// --------------------------------------------------------------
+// Mixins
+// ============================================================================
+
+=clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+// -= Media breakpoints =-
+$bp1: 800px
+$bp2: 500px
+
+// --------------------------------------------------------------
+// General page styles
+// ============================================================================
+
+// -= Poor man's css reset =-
+*
+    margin: 0
+    padding: 0
+    +box-sizing(border-box)
+
+
+// -= Simple grid =-
+.group
+    +clearfix
+
+%grid
+    float: left
+    padding: 2%
+
+.grid-1-3
+    @extend %grid
+    width: 33.333%
+
+    @media (max-width: $bp1)
+        width: 100%
+
+
+
+// -= A bit of typography =-
+body
+    font: normal 16px/1.2 Helvetica
+
+
+h1,
+.h1
+    font-size: 4em
+    font-weight: bold
+    margin-bottom: 1em
+
+h1.hero,
+.h1-hero
+    font-size: 6em
+
+    @media (max-width: $bp1)
+        font-size: 4em
+
+    @media (max-width: $bp2)
+        font-size: 3em
+
+h2,
+.h2
+    font-size: 3em
+    font-weight: bold
+    margin-bottom: 1em
+
+    @media (max-width: $bp2)
+        font-size: 2em
+
+h3,
+.h3
+    font-size: 2.5em
+    font-weight: bold
+    margin-bottom: 1em
+
+h4,
+.h4
+    font-size: 2em
+    font-weight: bold
+    margin-bottom: 1em
+
+h5,
+.h5
+    font-size: 1.6em
+    font-weight: bold
+    margin-bottom: 1em
+
+h6,
+.h6
+    font-size: 1.2em
+    font-weight: bold
+    margin-bottom: 1em
+
+p
+    margin: 20px 0
+    line-height: 1.5
+
+    &:first-of-type
+        margin-top: 0
+
+
+ul
+    list-style-position: inside
+    margin-left: 2em
+
+    &.no-marks
+        list-style-type: none
+
+
+li
+    margin: 10px 0
+
+
+// --------------------------------------------------------------
+// Layout and Presentation
+// ============================================================================
+
+$mainTextColor: #242424
+$alternativeTextColor: #b4b0a6
+
+body
+    color: $mainTextColor
+    background: image-url("bg1.png") repeat
+
+
+%invert-color-scheme
+    color: $alternativeTextColor
+    border-top: 3px solid #242424
+    border-bottom: 3px solid #242424
+    background: image-url("bg2.png") repeat
+
+
+.site-header
+    text-align: center
+
+    > .headline
+        margin: 10px 0 50px 0
+
+        @media (max-width: $bp2)
+            margin-bottom: 20px
+
+        > h1,
+        > h2
+            margin-bottom: 0
+
+    > .download
+        @extend %invert-color-scheme
+
+        > .button
+            display: inline-block
+            padding: 7px 10px
+            font-size: 1.7em
+            text-transform: uppercase
+            text-decoration: none
+            font-weight: bold
+            color: inherit
+            position: relative
+
+            @media (max-width: $bp1)
+                font-size: 1.4em
+
+            @media (max-width: $bp2)
+                font-size: 1.1em
+
+            &:hover
+                text-decoration: underline
+                color: transparent
+
+                &:before,
+                &:after
+                    content: attr(data-value)
+
+            &:before,
+            &:after
+                display: inline-block
+                position: absolute
+                padding: inherit
+                top: 0
+                left: 0
+
+            &:before
+                color: #464674
+
+            &:after
+                height: ((16 * 1.7 - 7) / (2*16*1.7)) * 1em
+                overflow: hidden
+                color: $alternativeTextColor
+
+
+.site-main
+    margin: 50px 0 0
+    padding: 0 10%
+
+    overflow: hidden
+
+    @media (max-width: $bp2)
+        margin-top: 20px
+
+    section
+        margin: 60px 0
+
+        @media (max-width: $bp2)
+            margin: 30px 0
+
+        &:first-child
+            margin: 0
+
+
+.about
+    font-size: 1.1em
+    font-style: italic
+
+
+.warn
+    margin-bottom: 30px
+    &:before
+        content: "Warn! "
+        text-transform: uppercase
+
+
+.site-footer
+    @extend %invert-color-scheme
+    padding: 25px 5%
+
+
+.ao-icon
+    display: inline-block
+    font-style: normal
+    line-height: 0
+    +transition(color .3s)
+
+    &:before
+        content: "⌬"
+        font-size: 3em
+
+
+// >------------= Slider =------------<
+
+$slideHeight: 250px
+$slideHeight-bp1: 200px
+
+.slider
+    width: 100%
+    height: $slideHeight
+    position: relative
+    overflow: hidden
+
+    @media (max-width: $bp1)
+        height: $slideHeight-bp1
+
+    > .slide
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        line-height: $slideHeight
+        text-align: center
+        font-size: 6vw
+        color: #fff
+
+        @media (max-width: $bp1)
+            line-height: $slideHeight-bp1
+
+        &.color-1
+            background: #006394
+
+        &.color-2
+            background: #D13D56
+
+        &.color-3
+            background: #38A86B
+
+
+.controls
+    +clearfix
+
+
+.slider-nav
+    display: inline-block
+    list-style-type: none
+
+    li
+        display: inline-block
+        width: 20px
+        height: 20px
+        line-height: 20px
+        text-align: center
+        border: 1px solid #242424
+        cursor: pointer
+
+        &.active
+            background: #242424
+            color: #fff
+
+
+.autoplay
+    text-align: right
