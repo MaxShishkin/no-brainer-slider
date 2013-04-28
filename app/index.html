@@ -7,10 +7,34 @@
         <meta name="description" content="A really simple css3 slider">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:copy styles/main.sass -->
+            <!-- link rel="stylesheet" href="styles/main.sass" -->
+        <!-- endbuild -->
+        <!-- build:copy(.tmp) styles/main.css -->
+            <!-- link rel="stylesheet" href="styles/main.css" -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.min.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:copy styles/no-brainer-slider.sass -->
+            <!-- link rel="stylesheet" href="styles/no-brainer-slider.sass" -->
+        <!-- endbuild -->
+        <!-- build:copy(.tmp) styles/no-brainer-slider.css -->
+            <!-- link rel="stylesheet" href="styles/no-brainer-slider.css" -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/no-brainer-slider.min.css -->
         <link rel="stylesheet" href="styles/no-brainer-slider.css">
+        <!-- endbuild -->
+
+        <!-- build:css styles/vendor/prism.min.css -->
         <link rel="stylesheet" href="components/prism/prism.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.custom.min.js -->
         <script src="scripts/vendor/modernizr.custom.js"></script>
+        <!-- endbuild -->
     </head>
     <body>
         <header class="site-header">
@@ -549,12 +573,32 @@ nbs.setAutoplay(true);
             <i class="ao-icon"></i> authored by Max Shishkin, 2013
         </footer>
 
-        <!-- build:js scripts/main.js -->
+        <!-- build:js scripts/vendor/jquery.min.js -->
         <script src="components/jquery/jquery.js"></script>
-        <script src="scripts/no-brainer-slider.js"></script>
-        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/prism.min.js -->
         <script src="components/prism/prism.js"></script>
         <!-- endbuild -->
 
+        <!-- build:copy scripts/no-brainer-slider.coffee -->
+            <!-- script src="scripts/no-brainer-slider.coffee"></script -->
+        <!-- endbuild -->
+        <!-- build:copy(.tmp) scripts/no-brainer-slider.js -->
+            <!-- script src="scripts/no-brainer-slider.js"></script -->
+        <!-- endbuild -->
+        <!-- build:js(.tmp) scripts/no-brainer-slider.min.js -->
+        <script src="scripts/no-brainer-slider.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:copy scripts/main.coffee -->
+            <!-- script src="scripts/main.coffee"></script -->
+        <!-- endbuild -->
+        <!-- build:copy(.tmp) scripts/main.js -->
+            <!-- script src="scripts/main.js"></script -->
+        <!-- endbuild -->
+        <!-- build:js(.tmp) scripts/main.min.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 </body>
 </html>

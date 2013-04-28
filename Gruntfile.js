@@ -140,9 +140,13 @@ module.exports = function (grunt) {
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
                 importPath: 'app/components',
-                relativeAssets: true
+                relativeAssets: false
             },
-            dist: {},
+            dist: {
+                options: {
+                    noLineComments: true
+                }
+            },
             server: {
                 options: {
                     debugInfo: true
@@ -154,16 +158,8 @@ module.exports = function (grunt) {
         /*concat: {
             dist: {}
         },*/
-        
-        uglify: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/scripts/main.js': [
-                        '<%= yeoman.app %>/scripts/{,*/}*.js'
-                    ],
-                }
-            }
-        },
+
+        uglify: {},
         useminPrepare: {
             html: '<%= yeoman.app %>/index.html',
             options: {
@@ -187,16 +183,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        cssmin: {
-            dist: {
-                files: {
-                    '<%= yeoman.dist %>/styles/main.css': [
-                        '.tmp/styles/{,*/}*.css',
-                        '<%= yeoman.app %>/styles/{,*/}*.css'
-                    ]
-                }
-            }
-        },
+        cssmin: {},
         htmlmin: {
             dist: {
                 options: {
@@ -235,6 +222,11 @@ module.exports = function (grunt) {
         bower: {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
+            }
+        },
+        shell: {
+            dist: {
+                command: 'cp -r <%= yeoman.dist %> nbs && zip -r nbs.zip nbs && rm -rf nbs'
             }
         }
     });
@@ -276,7 +268,8 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy',
-        'usemin'
+        'usemin',
+        'shell:dist'
     ]);
 
     grunt.registerTask('default', [
