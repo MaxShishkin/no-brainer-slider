@@ -8,4 +8,4 @@ of classes and small-possible javascript acting as a state changer.
 You can use it as a simple drop-in solution while prototyping, as a blueprint
 for more complex work on top or use it standalone as is.
 
-For more information visit the [demo page](http://maxshishkin.github.io/no-brainer-slider/).
+For more information visit the [demo page](http://angryobject.github.io/no-brainer-slider/).
